@@ -58,7 +58,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <span className="text-primary mr-1">{String(index + 1).padStart(2, '0')}.</span>
+                  <span className="text-primary mr-1">{String(index).padStart(2, '0')}.</span>
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                 </motion.a>
@@ -106,7 +106,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <span className="text-primary mr-2">{String(index + 1).padStart(2, '0')}.</span>
+                  <span className="text-primary mr-2">{String(index).padStart(2, '0')}.</span>
                   {item.name}
                 </motion.a>
               ))}
