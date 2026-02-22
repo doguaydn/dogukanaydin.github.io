@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub, FiFolder } from 'react-icons/fi';
 import { SiAppstore } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
+import TiltCard from './TiltCard';
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -221,38 +222,40 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {otherProjects.map((project, index) => (
-            <motion.div
+            <TiltCard
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="bg-dark-800/50 border border-gray-800 rounded-xl p-6 hover:border-primary/30 transition-all group"
+              className="relative bg-dark-800/50 border border-gray-800 rounded-xl p-6 hover:border-primary/30 transition-all group"
             >
-              <div className="flex items-center justify-between mb-4">
-                <FiFolder className="text-primary" size={40} />
-                <div className="flex gap-3">
-                  <FiGithub className="text-gray-500 hover:text-primary transition-colors cursor-pointer" size={20} />
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <FiFolder className="text-primary" size={40} />
+                  <div className="flex gap-3">
+                    <FiGithub className="text-gray-500 hover:text-primary transition-colors cursor-pointer" size={20} />
+                  </div>
                 </div>
-              </div>
-              <h4 className="text-xl font-display font-semibold mb-2 group-hover:text-primary transition-colors">
-                {project.title}
-              </h4>
-              <p className="text-gray-500 text-sm mb-4">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs font-mono text-gray-400"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+                <h4 className="text-xl font-display font-semibold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h4>
+                <p className="text-gray-500 text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs font-mono text-gray-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
       </div>

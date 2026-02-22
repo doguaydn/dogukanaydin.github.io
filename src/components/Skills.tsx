@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TiltCard from './TiltCard';
 import {
   SiNodedotjs, SiTypescript, SiJavascript,
   SiPostgresql, SiMongodb, SiRedis, SiElasticsearch, SiMysql, SiSqlite,
@@ -101,58 +102,62 @@ const Skills = () => {
         {/* Skills grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <motion.div
+            <TiltCard
               key={category.titleKey}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: categoryIndex * 0.1 }}
-              className="bg-dark-900/50 border border-gray-800 rounded-xl p-6 hover:border-primary/30 transition-all"
+              className="relative bg-dark-900/50 border border-gray-800 rounded-xl p-6 hover:border-primary/30 transition-all"
+              glareColor={`${category.color}33`}
             >
-              {/* Category header with progress bar */}
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-display font-semibold">{t(category.titleKey)}</h3>
-                <span className="font-mono text-sm" style={{ color: category.color }}>
-                  {category.level}%
-                </span>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: categoryIndex * 0.1 }}
+              >
+                {/* Category header with progress bar */}
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-display font-semibold">{t(category.titleKey)}</h3>
+                  <span className="font-mono text-sm" style={{ color: category.color }}>
+                    {category.level}%
+                  </span>
+                </div>
 
-              {/* Progress bar */}
-              <div className="h-2 bg-dark-700 rounded-full mb-6 overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${category.level}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: categoryIndex * 0.2 }}
-                  className="h-full rounded-full relative skill-bar"
-                  style={{ backgroundColor: category.color }}
-                />
-              </div>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-3">
-                {category.technologies.map((tech, techIndex) => (
+                {/* Progress bar */}
+                <div className="h-2 bg-dark-700 rounded-full mb-6 overflow-hidden">
                   <motion.div
-                    key={tech.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${category.level}%` }}
                     viewport={{ once: true }}
-                    transition={{ delay: categoryIndex * 0.1 + techIndex * 0.05 }}
-                    whileHover={{ scale: 1.1, y: -3 }}
-                    className="flex items-center gap-2 px-3 py-2 bg-dark-700/50 border border-gray-700 rounded-lg hover:border-primary/50 transition-all cursor-default group"
-                  >
-                    <tech.icon
-                      size={18}
-                      className="transition-colors"
-                      style={{ color: tech.color }}
-                    />
-                    <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
-                      {tech.name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                    transition={{ duration: 1, delay: categoryIndex * 0.2 }}
+                    className="h-full rounded-full relative skill-bar"
+                    style={{ backgroundColor: category.color }}
+                  />
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-3">
+                  {category.technologies.map((tech, techIndex) => (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: categoryIndex * 0.1 + techIndex * 0.05 }}
+                      whileHover={{ scale: 1.1, y: -3 }}
+                      className="flex items-center gap-2 px-3 py-2 bg-dark-700/50 border border-gray-700 rounded-lg hover:border-primary/50 transition-all cursor-default group"
+                    >
+                      <tech.icon
+                        size={18}
+                        className="transition-colors"
+                        style={{ color: tech.color }}
+                      />
+                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors">
+                        {tech.name}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
 
