@@ -58,8 +58,8 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 bg-dark-800/30">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-20 px-4 bg-dark-800/30 w-full overflow-hidden">
+      <div className="max-w-4xl mx-auto w-full">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ const Experience = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-secondary" />
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-secondary" style={{ background: 'linear-gradient(to bottom, #a855f7, #be185d, #3b82f6)' }} />
 
           {experiences.map((exp, index) => (
             <motion.div

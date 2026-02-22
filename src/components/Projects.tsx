@@ -5,14 +5,14 @@ import { SiAppstore } from 'react-icons/si';
 const Projects = () => {
   const featuredProjects = [
     {
-      title: 'Kariyer Zamanı',
+      title: 'Kariyer Zamani',
       description: 'Full-stack job search platform with advanced search capabilities. Implemented Elasticsearch with Turkish language support, Redis caching (60% DB load reduction), and real-time features.',
       tech: ['Node.js', 'Express', 'PostgreSQL', 'Elasticsearch', 'Redis', 'Docker', 'AWS'],
       links: {
         live: 'https://kariyerzamani.com',
       },
-      highlights: ['2s → 200ms search', '60% DB load reduction', 'Production ready'],
-      color: '#00ff88',
+      highlights: ['2s > 200ms search', '60% DB load reduction', 'Production ready'],
+      color: '#a855f7',
     },
     {
       title: 'Proteam HR',
@@ -22,7 +22,7 @@ const Projects = () => {
         appstore: 'https://apps.apple.com/tr/app/proteam-e-i-k/id6692632266',
       },
       highlights: ['Live on App Store', 'Full CRUD API', 'JWT Auth'],
-      color: '#00d4ff',
+      color: '#3b82f6',
     },
     {
       title: 'Hangify',
@@ -32,7 +32,7 @@ const Projects = () => {
         github: '#',
       },
       highlights: ['Real-time', 'Socket.io', 'Coming Soon'],
-      color: '#6366f1',
+      color: '#be185d',
     },
   ];
 
@@ -55,8 +55,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-20 px-4 w-full overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,14 +91,14 @@ const Projects = () => {
                   whileHover={{ scale: 1.02 }}
                   className="relative group"
                 >
-                  <div 
+                  <div
                     className="aspect-video rounded-xl overflow-hidden border border-gray-800"
                     style={{ backgroundColor: `${project.color}10` }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-transparent to-dark-900/80" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center p-8">
-                        <div 
+                        <div
                           className="text-6xl font-bold font-display mb-4"
                           style={{ color: project.color }}
                         >
@@ -108,7 +108,7 @@ const Projects = () => {
                           {project.highlights.map((h, i) => (
                             <span key={i}>
                               {h}
-                              {i < project.highlights.length - 1 && ' • '}
+                              {i < project.highlights.length - 1 && ' \u2022 '}
                             </span>
                           ))}
                         </div>
@@ -116,7 +116,7 @@ const Projects = () => {
                     </div>
                   </div>
                   {/* Glow effect on hover */}
-                  <div 
+                  <div
                     className="absolute -inset-1 rounded-xl opacity-0 group-hover:opacity-30 transition-opacity blur-xl -z-10"
                     style={{ backgroundColor: project.color }}
                   />

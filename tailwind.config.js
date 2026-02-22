@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#00ff88",
-        secondary: "#6366f1",
-        accent: "#00d4ff",
+        primary: "#a855f7",
+        secondary: "#3b82f6",
+        accent: "#be185d",
         dark: {
           900: "#0a0a0a",
           800: "#111111",
@@ -31,8 +31,8 @@ export default {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 15px #00ff88' },
-          '100%': { boxShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88' },
+          '0%': { boxShadow: '0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 15px #a855f7' },
+          '100%': { boxShadow: '0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 30px #a855f7' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },

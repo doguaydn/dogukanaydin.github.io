@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-dark-900 grid-bg">
+    <div className="relative min-h-screen bg-dark-900 grid-bg overflow-x-hidden">
       {/* Noise overlay */}
       <div className="noise-overlay" />
       
@@ -42,12 +42,17 @@ function App() {
       <Navbar />
       
       {/* Main content */}
-      <main className="relative z-10">
+      <main className="relative z-10 w-full">
         <Hero />
+        <div className="py-16" />
         <About />
+        <div className="py-16" />
         <Skills />
+        <div className="py-16" />
         <Projects />
+        <div className="py-16" />
         <Experience />
+        <div className="py-16" />
         <Contact />
       </main>
       

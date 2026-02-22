@@ -43,7 +43,7 @@ const Hero = () => {
           className="mb-4"
         >
           <span className="font-mono text-primary text-sm md:text-base">
-            &gt; Hello, World! I'm
+            &gt; Hello World! I'm
           </span>
         </motion.div>
 

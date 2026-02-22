@@ -7,31 +7,31 @@ const About = () => {
       icon: FiServer,
       title: 'Backend Development',
       description: 'Building robust APIs and microservices with Node.js, Express, and Java Spring Boot.',
-      color: '#00ff88',
+      color: '#a855f7',
     },
     {
       icon: FiCloud,
       title: 'DevOps & Cloud',
       description: 'Docker, AWS, CI/CD pipelines, and infrastructure automation.',
-      color: '#00d4ff',
+      color: '#3b82f6',
     },
     {
       icon: FiCode,
       title: 'Frontend Development',
       description: 'Creating responsive interfaces with React, Vue.js, and modern frameworks.',
-      color: '#6366f1',
+      color: '#be185d',
     },
     {
       icon: FiSmartphone,
       title: 'Database & Caching',
       description: 'PostgreSQL, MongoDB, Redis, Elasticsearch for optimal data management.',
-      color: '#00ff88',
+      color: '#a855f7',
     },
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-20 px-4 w-full overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,22 +66,22 @@ const About = () => {
               <div className="font-mono text-sm space-y-4 text-gray-300">
                 <p>
                   <span className="text-primary">## </span>
-                  Hi there! 👋
+                  Hi there!
                 </p>
                 <p>
-                  I'm a <span className="text-primary">Computer Engineer</span> with 
+                  I'm a <span className="text-primary">Computer Engineer</span> with
                   <span className="text-accent"> 3+ years</span> of experience building
                   production-ready applications.
                 </p>
                 <p>
-                  My journey started with curiosity about how systems work, and evolved into 
-                  a passion for creating <span className="text-primary">scalable</span>, 
-                  <span className="text-accent"> efficient</span>, and 
+                  My journey started with curiosity about how systems work, and evolved into
+                  a passion for creating <span className="text-primary">scalable</span>,
+                  <span className="text-accent"> efficient</span>, and
                   <span className="text-secondary"> reliable</span> software solutions.
                 </p>
                 <p>
-                  I specialize in <span className="text-primary">backend development</span> but 
-                  I'm comfortable working across the entire stack. I love solving complex 
+                  I specialize in <span className="text-primary">backend development</span> but
+                  I'm comfortable working across the entire stack. I love solving complex
                   problems and turning ideas into reality.
                 </p>
                 <p>

@@ -13,32 +13,32 @@ const Skills = () => {
     {
       title: 'Backend',
       level: 90,
-      color: '#00ff88',
+      color: '#a855f7',
       technologies: [
         { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
-        { icon: SiExpress, name: 'Express.js', color: '#000000' },
+        { icon: SiExpress, name: 'Express.js', color: '#ffffff' },
         { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
         { icon: FaJava, name: 'Java', color: '#007396' },
         { icon: SiSpringboot, name: 'Spring Boot', color: '#6DB33F' },
-        { icon: SiSocketdotio, name: 'Socket.io', color: '#010101' },
+        { icon: SiSocketdotio, name: 'Socket.io', color: '#ffffff' },
       ],
     },
     {
       title: 'Database',
       level: 85,
-      color: '#00d4ff',
+      color: '#3b82f6',
       technologies: [
         { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
         { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
         { icon: SiRedis, name: 'Redis', color: '#DC382D' },
         { icon: SiElasticsearch, name: 'Elasticsearch', color: '#005571' },
-        { icon: SiPrisma, name: 'Prisma', color: '#2D3748' },
+        { icon: SiPrisma, name: 'Prisma', color: '#a855f7' },
       ],
     },
     {
       title: 'DevOps',
       level: 80,
-      color: '#6366f1',
+      color: '#be185d',
       technologies: [
         { icon: SiDocker, name: 'Docker', color: '#2496ED' },
         { icon: SiAmazon, name: 'AWS', color: '#FF9900' },
@@ -49,7 +49,7 @@ const Skills = () => {
     {
       title: 'Frontend',
       level: 70,
-      color: '#f472b6',
+      color: '#c084fc',
       technologies: [
         { icon: SiReact, name: 'React', color: '#61DAFB' },
         { icon: SiVuedotjs, name: 'Vue.js', color: '#4FC08D' },
@@ -60,8 +60,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-dark-800/30">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-20 px-4 bg-dark-800/30 w-full overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -120,8 +120,8 @@ const Skills = () => {
                     whileHover={{ scale: 1.1, y: -3 }}
                     className="flex items-center gap-2 px-3 py-2 bg-dark-700/50 border border-gray-700 rounded-lg hover:border-primary/50 transition-all cursor-default group"
                   >
-                    <tech.icon 
-                      size={18} 
+                    <tech.icon
+                      size={18}
                       className="transition-colors"
                       style={{ color: tech.color }}
                     />

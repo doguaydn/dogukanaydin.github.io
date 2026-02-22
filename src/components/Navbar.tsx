@@ -47,30 +47,32 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
+          <div className="hidden md:flex items-center flex-1 justify-center">
+            <div className="flex items-center gap-8">
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className="font-mono text-sm text-gray-400 hover:text-primary transition-colors relative group"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <span className="text-primary mr-1">{String(index + 1).padStart(2, '0')}.</span>
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </motion.a>
+              ))}
               <motion.a
-                key={item.name}
-                href={item.href}
-                className="font-mono text-sm text-gray-400 hover:text-primary transition-colors relative group"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                href="/cv.pdf"
+                target="_blank"
+                className="px-4 py-2 border border-primary text-primary font-mono text-sm rounded hover:bg-primary/10 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <span className="text-primary mr-1">{String(index + 1).padStart(2, '0')}.</span>
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                Resume
               </motion.a>
-            ))}
-            <motion.a
-              href="/cv.pdf"
-              target="_blank"
-              className="px-4 py-2 border border-primary text-primary font-mono text-sm rounded hover:bg-primary/10 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Resume
-            </motion.a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

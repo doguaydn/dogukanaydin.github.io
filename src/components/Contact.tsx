@@ -14,8 +14,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-4 w-full overflow-hidden">
+      <div className="max-w-4xl mx-auto w-full">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ const Contact = () => {
                 <p className="text-gray-500 mb-2">
                   <span className="text-primary">$</span> send_message --to doguaydin
                 </p>
-                <p className="text-accent mb-4">
+                <p className="text-secondary mb-4">
                   Ready to receive your message...
                 </p>
 
