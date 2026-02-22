@@ -87,11 +87,41 @@ const Navbar = () => {
               <motion.a
                 href={resumeUrl}
                 target="_blank"
-                className="px-4 py-2 border-2 border-primary text-primary font-pixel text-[8px] hover:bg-primary/10 transition-all"
+                className="relative px-4 py-2 border-2 border-primary text-primary font-pixel text-[8px] hover:bg-primary/10 transition-all overflow-hidden group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t('nav.resume')}
+                {/* Sparkle particles */}
+                {[...Array(5)].map((_, i) => (
+                  <motion.span
+                    key={i}
+                    className="absolute w-1 h-1 bg-primary rounded-full pointer-events-none"
+                    style={{
+                      left: `${15 + i * 18}%`,
+                      top: `${20 + (i % 3) * 25}%`,
+                    }}
+                    animate={{
+                      opacity: [0, 1, 0],
+                      scale: [0, 1.2, 0],
+                    }}
+                    transition={{
+                      duration: 1.4,
+                      repeat: Infinity,
+                      delay: i * 0.3,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                ))}
+                {/* Shimmer sweep */}
+                <motion.span
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: 'linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.15) 50%, transparent 60%)',
+                  }}
+                  animate={{ x: ['-100%', '200%'] }}
+                  transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 1.5, ease: 'easeInOut' }}
+                />
+                <span className="relative z-10">{t('nav.resume')}</span>
               </motion.a>
             </div>
           </div>
@@ -144,10 +174,25 @@ const Navbar = () => {
                 <motion.a
                   href={resumeUrl}
                   target="_blank"
-                  className="px-4 py-2 border-2 border-primary text-primary font-pixel text-[8px] hover:bg-primary/10 transition-all"
+                  className="relative px-4 py-2 border-2 border-primary text-primary font-pixel text-[8px] hover:bg-primary/10 transition-all overflow-hidden"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {t('nav.resume')}
+                  {[...Array(5)].map((_, i) => (
+                    <motion.span
+                      key={i}
+                      className="absolute w-1 h-1 bg-primary rounded-full pointer-events-none"
+                      style={{ left: `${15 + i * 18}%`, top: `${20 + (i % 3) * 25}%` }}
+                      animate={{ opacity: [0, 1, 0], scale: [0, 1.2, 0] }}
+                      transition={{ duration: 1.4, repeat: Infinity, delay: i * 0.3, ease: 'easeInOut' }}
+                    />
+                  ))}
+                  <motion.span
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: 'linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.15) 50%, transparent 60%)' }}
+                    animate={{ x: ['-100%', '200%'] }}
+                    transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 1.5, ease: 'easeInOut' }}
+                  />
+                  <span className="relative z-10">{t('nav.resume')}</span>
                 </motion.a>
               </div>
             </div>
