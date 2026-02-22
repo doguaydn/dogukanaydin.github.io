@@ -1,9 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiPhone } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('doguaydin.comp@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const contactInfo = [
     { icon: FiMail, label: t('contact.email'), value: 'doguaydin.comp@gmail.com', href: 'mailto:doguaydin.comp@gmail.com' },
@@ -136,14 +144,14 @@ const Contact = () => {
                   {t('contact.terminalReady')}
                 </p>
 
-                <motion.a
-                  href="mailto:doguaydin.comp@gmail.com"
+                <motion.button
+                  onClick={copyEmail}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="block w-full py-3 bg-primary text-dark-900 font-semibold text-center rounded-lg hover:bg-primary/90 transition-colors"
+                  className="block w-full py-3 bg-primary text-dark-900 font-semibold text-center rounded-lg hover:bg-primary/90 transition-colors cursor-pointer"
                 >
-                  {t('contact.sayHello')} 👋
-                </motion.a>
+                  {copied ? '✓ Email Copied!' : `${t('contact.sayHello')} 👋`}
+                </motion.button>
               </div>
             </div>
           </motion.div>

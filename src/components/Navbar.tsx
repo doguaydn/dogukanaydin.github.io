@@ -56,8 +56,10 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center flex-1 justify-center">
-            <div className="flex items-center gap-8">
+          <div className="hidden md:flex items-center flex-1">
+            {/* Spacer to balance right side */}
+            <div className="w-24 shrink-0" />
+            <div className="flex items-center gap-8 mx-auto">
               {navKeys.map((item, index) => (
                 <motion.a
                   key={item.key}
@@ -72,7 +74,9 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                 </motion.a>
               ))}
-              {/* Language Toggle */}
+            </div>
+            {/* Language Toggle & Resume */}
+            <div className="flex items-center gap-4 ml-4 shrink-0">
               <button
                 onClick={toggleLanguage}
                 className="font-mono text-sm flex items-center gap-1 cursor-pointer"

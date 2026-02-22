@@ -28,6 +28,26 @@ const Projects = () => {
       color: '#3b82f6',
     },
     {
+      title: 'TaskLabs',
+      description: t('projects.taskLabs.description'),
+      tech: ['React', 'Node.js', 'MongoDB', 'Redis', 'RabbitMQ', 'Socket.io', 'Docker'],
+      links: {
+        github: '#',
+      },
+      highlights: ['Real-time', 'Event-driven', 'Team Collaboration'],
+      color: '#be185d',
+    },
+    {
+      title: 'Sezi',
+      description: t('projects.sezi.description'),
+      tech: ['Spring Boot', 'React Native', 'PostgreSQL', 'RabbitMQ', 'Gemini AI'],
+      links: {
+        github: '#',
+      },
+      highlights: ['AI Matching', 'Astrology', 'Coming Soon'],
+      color: '#f59e0b',
+    },
+    {
       title: 'Hangify',
       description: t('projects.hangify.description'),
       tech: ['TypeScript', 'Prisma', 'Socket.io', 'Redis', 'Elasticsearch', 'Digital Ocean'],
@@ -35,7 +55,7 @@ const Projects = () => {
         github: '#',
       },
       highlights: ['Real-time', 'Socket.io', 'Coming Soon'],
-      color: '#be185d',
+      color: '#10b981',
     },
   ];
 
