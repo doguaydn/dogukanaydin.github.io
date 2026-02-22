@@ -3,9 +3,9 @@ import {
   SiNodedotjs, SiTypescript, SiJavascript,
   SiPostgresql, SiMongodb, SiRedis, SiElasticsearch, SiMysql, SiSqlite,
   SiDocker, SiAmazon, SiNginx, SiGithubactions, SiDigitalocean, SiCloudflare,
-  SiReact, SiVuedotjs, SiTailwindcss, SiHtml5, SiExpo, SiVite,
+  SiReact, SiVuedotjs, SiTailwindcss, SiHtml5, SiCss3, SiExpo, SiVite,
   SiExpress, SiSpringboot, SiPrisma, SiSocketdotio,
-  SiNestjs, SiRabbitmq, SiSwagger, SiHibernate, SiApachemaven, SiFirebase
+  SiNestjs, SiRabbitmq, SiHibernate, SiFirebase
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { VscDatabase } from 'react-icons/vsc';
@@ -71,6 +71,7 @@ const Skills = () => {
         { icon: SiReact, name: 'React Native', color: '#61DAFB' },
         { icon: SiVuedotjs, name: 'Vue.js', color: '#4FC08D' },
         { icon: SiHtml5, name: 'HTML5', color: '#E34F26' },
+        { icon: SiCss3, name: 'CSS3', color: '#1572B6' },
         { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
         { icon: SiTailwindcss, name: 'Tailwind', color: '#06B6D4' },
         { icon: SiExpo, name: 'Expo', color: '#000020' },
