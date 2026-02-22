@@ -7,25 +7,25 @@ const About = () => {
       icon: FiServer,
       title: 'Backend Development',
       description: 'Building robust APIs and microservices with Node.js, Express, and Java Spring Boot.',
-      color: 'primary',
+      color: '#00ff88',
     },
     {
       icon: FiCloud,
       title: 'DevOps & Cloud',
       description: 'Docker, AWS, CI/CD pipelines, and infrastructure automation.',
-      color: 'accent',
+      color: '#00d4ff',
     },
     {
       icon: FiCode,
       title: 'Frontend Development',
       description: 'Creating responsive interfaces with React, Vue.js, and modern frameworks.',
-      color: 'secondary',
+      color: '#6366f1',
     },
     {
       icon: FiSmartphone,
       title: 'Database & Caching',
       description: 'PostgreSQL, MongoDB, Redis, Elasticsearch for optimal data management.',
-      color: 'primary',
+      color: '#00ff88',
     },
   ];
 
@@ -130,8 +130,8 @@ const About = () => {
                 whileHover={{ y: -5 }}
                 className="p-5 bg-dark-800/50 border border-gray-800 rounded-lg hover:border-primary/50 transition-all group"
               >
-                <div className={`w-12 h-12 rounded-lg bg-${item.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <item.icon className={`text-${item.color}`} size={24} />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ backgroundColor: `${item.color}1a` }}>
+                  <item.icon size={24} style={{ color: item.color }} />
                 </div>
                 <h3 className="font-display font-semibold mb-2 text-white group-hover:text-primary transition-colors">
                   {item.title}

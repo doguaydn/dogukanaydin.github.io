@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { 
-  SiNodedotjs, SiTypescript, SiJavascript, SiPython, SiJava,
+import {
+  SiNodedotjs, SiTypescript, SiJavascript,
   SiPostgresql, SiMongodb, SiRedis, SiElasticsearch,
   SiDocker, SiAmazon, SiNginx, SiGithubactions,
   SiReact, SiVuedotjs, SiTailwindcss,
   SiExpress, SiSpringboot, SiPrisma, SiSocketdotio
 } from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
 
 const Skills = () => {
   const skillCategories = [
@@ -17,7 +18,7 @@ const Skills = () => {
         { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
         { icon: SiExpress, name: 'Express.js', color: '#000000' },
         { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
-        { icon: SiJava, name: 'Java', color: '#007396' },
+        { icon: FaJava, name: 'Java', color: '#007396' },
         { icon: SiSpringboot, name: 'Spring Boot', color: '#6DB33F' },
         { icon: SiSocketdotio, name: 'Socket.io', color: '#010101' },
       ],
