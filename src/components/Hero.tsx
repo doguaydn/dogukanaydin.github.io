@@ -88,7 +88,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="flex flex-wrap justify-center gap-3 mb-10"
         >
-          {['Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Docker', 'AWS'].map((tech, index) => (
+          {['Node.js', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Docker', 'AWS'].map((tech, index) => (
             <motion.span
               key={tech}
               initial={{ opacity: 0, scale: 0.8 }}
