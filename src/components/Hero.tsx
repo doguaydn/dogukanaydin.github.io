@@ -49,7 +49,7 @@ const Hero = () => {
           transition={{ duration: 0.5, type: 'spring' }}
           className="mb-6 inline-block"
         >
-          <span className="font-pixel text-xs text-primary border-2 border-primary px-4 py-2 bg-primary/10">
+          <span className="font-pixel text-[8px] sm:text-xs text-primary border-2 border-primary px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10">
             {t('hero.level')} &bull; {t('hero.class')}
           </span>
         </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-2xl md:text-4xl font-mono text-gray-400 mb-8"
+          className="text-lg sm:text-2xl md:text-4xl font-mono text-gray-400 mb-6 sm:mb-8"
         >
           <span className="text-primary">&gt; </span>
           <span ref={typedRef}></span>
@@ -145,7 +145,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1 + index * 0.08 }}
-              className="px-3 py-1 text-sm font-mono border border-primary/30 text-primary/80 rounded hover:border-primary hover:text-primary transition-all cursor-default"
+              className="px-2 sm:px-3 py-1 text-xs sm:text-sm font-mono border border-primary/30 text-primary/80 rounded hover:border-primary hover:text-primary transition-all cursor-default"
             >
               {tech}
             </motion.span>
@@ -185,7 +185,7 @@ const Hero = () => {
         >
           <motion.a
             href="#projects"
-            className="inline-flex items-center px-8 py-4 bg-primary/10 border-2 border-primary text-primary font-pixel text-xs rounded hover:bg-primary hover:text-dark-900 transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-primary/10 border-2 border-primary text-primary font-pixel text-[8px] sm:text-xs rounded hover:bg-primary hover:text-dark-900 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

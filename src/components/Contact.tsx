@@ -36,14 +36,14 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <span className="font-mono text-primary text-sm">{t('contact.sectionLabel')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
             {t('contact.title')} <span className="gradient-text">{t('contact.titleHighlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         {/* Main content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -51,7 +51,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-display font-semibold mb-4">
+            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-4">
               {t('contact.heading')}
             </h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
@@ -127,7 +127,7 @@ const Contact = () => {
               </div>
 
               {/* Terminal content */}
-              <div className="p-6 font-mono text-sm">
+              <div className="p-4 sm:p-6 font-mono text-sm">
                 <p className="text-gray-500 mb-2">
                   <span className="text-primary">$</span> {t('contact.terminalCmd1').replace('$ ', '')}
                 </p>

@@ -78,6 +78,10 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
+
+  section {
+    overflow-x: hidden;
+  }
 }
 
 /* Custom Scrollbar */
@@ -212,20 +216,36 @@
 .rpg-border::after {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border: 2px solid #a855f7;
   background: #0a0a0a;
 }
 
 .rpg-border::before {
-  top: -5px;
-  left: -5px;
+  top: -4px;
+  left: -4px;
 }
 
 .rpg-border::after {
-  top: -5px;
-  right: -5px;
+  top: -4px;
+  right: -4px;
+}
+
+@media (min-width: 640px) {
+  .rpg-border::before,
+  .rpg-border::after {
+    width: 8px;
+    height: 8px;
+  }
+  .rpg-border::before {
+    top: -5px;
+    left: -5px;
+  }
+  .rpg-border::after {
+    top: -5px;
+    right: -5px;
+  }
 }
 
 .rpg-corner-bl::before {

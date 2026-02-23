@@ -61,13 +61,13 @@ const About = () => {
           className="text-center mb-16"
         >
           <span className="font-pixel text-[10px] text-primary">{t('about.sectionLabel')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
             {t('about.title')} <span className="gradient-text">{t('about.titleHighlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* RPG Dialogue Box */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -76,7 +76,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <div className="rpg-border bg-dark-900/80 p-8">
+            <div className="rpg-border bg-dark-900/80 p-4 sm:p-6 md:p-8">
               {/* NPC name tag */}
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 rpg-border bg-primary/20 flex items-center justify-center">
@@ -159,7 +159,7 @@ const About = () => {
             </div>
 
             {/* Stats as RPG attributes */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               {[
                 { value: '3+', label: t('about.stat1Label') },
                 { value: '10+', label: t('about.stat2Label') },
@@ -171,9 +171,9 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center rpg-border bg-dark-900/60 p-5"
+                  className="text-center rpg-border bg-dark-900/60 p-3 sm:p-5"
                 >
-                  <div className="text-3xl font-bold text-primary font-display">{stat.value}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary font-display">{stat.value}</div>
                   <div className="font-pixel text-[7px] text-gray-500 mt-2">{stat.label}</div>
                 </motion.div>
               ))}
@@ -186,7 +186,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-2 gap-5"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5"
           >
             {expertise.map((item, index) => (
               <motion.div
@@ -196,7 +196,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="rpg-border bg-dark-900/60 p-6 hover:border-primary/50 transition-all group"
+                className="rpg-border bg-dark-900/60 p-4 sm:p-6 hover:border-primary/50 transition-all group"
               >
                 <div
                   className="w-14 h-14 flex items-center justify-center mb-4 border-2 group-hover:scale-110 transition-transform"

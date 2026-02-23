@@ -17,8 +17,10 @@ const Experience = () => {
         t('experience.job1.desc2'),
         t('experience.job1.desc3'),
         t('experience.job1.desc4'),
+        t('experience.job1.desc5'),
+        t('experience.job1.desc6'),
       ],
-      tech: ['Node.js', 'PostgreSQL', 'Elasticsearch', 'Redis', 'Docker', 'AWS'],
+      tech: ['Node.js', 'PostgreSQL', 'Elasticsearch', 'Redis', 'Docker', 'AWS', 'Parasut API', 'iyzico'],
       color: '#a855f7',
     },
     {
@@ -32,8 +34,9 @@ const Experience = () => {
         t('experience.job3.desc1'),
         t('experience.job3.desc2'),
         t('experience.job3.desc3'),
+        t('experience.job3.desc4'),
       ],
-      tech: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
+      tech: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Parasut API'],
       color: '#3b82f6',
     },
     {
@@ -79,7 +82,7 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <span className="font-pixel text-[10px] text-primary">{t('experience.sectionLabel')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
             {t('experience.title')} <span className="gradient-text">{t('experience.titleHighlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -94,19 +97,19 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rpg-border bg-dark-900/70 p-6 group hover:shadow-[0_0_20px_rgba(168,85,247,0.1)] transition-all"
+              className="rpg-border bg-dark-900/70 p-4 sm:p-6 group hover:shadow-[0_0_20px_rgba(168,85,247,0.1)] transition-all"
             >
               {/* Guild header */}
-              <div className="flex items-start gap-4 mb-5">
+              <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5">
                 <div
-                  className="w-14 h-14 flex items-center justify-center border-2 shrink-0 text-2xl"
+                  className="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center border-2 shrink-0 text-xl sm:text-2xl"
                   style={{ borderColor: exp.color, backgroundColor: `${exp.color}15` }}
                 >
                   {exp.guildIcon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="text-lg font-display font-bold text-white">
+                    <h3 className="text-base sm:text-lg font-display font-bold text-white">
                       {exp.company}
                     </h3>
                     <span
@@ -176,9 +179,9 @@ const Experience = () => {
           className="mt-12 text-center"
         >
           <h3 className="font-pixel text-xs text-primary mb-6">{t('experience.educationTitle')}</h3>
-          <div className="rpg-border bg-dark-900/60 p-6 max-w-md mx-auto">
+          <div className="rpg-border bg-dark-900/60 p-4 sm:p-6 max-w-md mx-auto">
             <span className="text-3xl mb-3 block">🎓</span>
-            <h4 className="text-lg font-display font-semibold">{t('experience.degree')}</h4>
+            <h4 className="text-base sm:text-lg font-display font-semibold">{t('experience.degree')}</h4>
             <p className="font-pixel text-[8px] text-primary mt-2">{t('experience.university')}</p>
             <p className="text-gray-500 text-sm mt-1 font-mono">{t('experience.educationPeriod')}</p>
           </div>

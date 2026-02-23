@@ -114,7 +114,7 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <span className="font-pixel text-[10px] text-primary">{t('projects.sectionLabel')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
             {t('projects.title')} <span className="gradient-text">{t('projects.titleHighlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -129,7 +129,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rpg-border bg-dark-900/60 p-6 md:p-8 relative overflow-hidden group"
+              className="rpg-border bg-dark-900/60 p-4 sm:p-6 md:p-8 relative overflow-hidden group"
             >
               {/* Quest badge */}
               <div className="absolute top-0 right-0">
@@ -147,10 +147,10 @@ const Projects = () => {
                 </span>
               </div>
 
-              <div className="grid md:grid-cols-12 gap-6 items-start mt-6">
+              <div className="grid md:grid-cols-12 gap-4 sm:gap-6 items-start mt-4 sm:mt-6">
                 {/* Quest info panel */}
                 <div className="md:col-span-8">
-                  <h3 className="text-2xl md:text-3xl font-bold font-display mb-3" style={{ color: project.color }}>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display mb-2 sm:mb-3" style={{ color: project.color }}>
                     {project.title}
                   </h3>
 
@@ -182,7 +182,7 @@ const Projects = () => {
 
                 {/* Quest reward panel */}
                 <div className="md:col-span-4">
-                  <div className="bg-dark-800/80 border-2 border-gray-700/50 p-4">
+                  <div className="bg-dark-800/80 border-2 border-gray-700/50 p-3 sm:p-4">
                     <span className="font-pixel text-[8px] text-gray-500 block mb-3">{t('projects.reward')}:</span>
                     <div className="font-pixel text-[10px] text-primary mb-4">{project.reward}</div>
 
@@ -255,11 +255,11 @@ const Projects = () => {
           <h3 className="font-pixel text-xs text-primary">{t('projects.otherTitle')}</h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {otherProjects.map((project, index) => (
             <TiltCard
               key={index}
-              className="relative rpg-border bg-dark-900/60 p-6 hover:border-primary/30 transition-all group"
+              className="relative rpg-border bg-dark-900/60 p-4 sm:p-6 hover:border-primary/30 transition-all group"
             >
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

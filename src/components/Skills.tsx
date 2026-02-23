@@ -97,7 +97,7 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <span className="font-pixel text-[10px] text-primary">{t('skills.sectionLabel')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-display mt-2 mb-4">
             {t('skills.title')} <span className="gradient-text">{t('skills.titleHighlight')}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -108,7 +108,7 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <TiltCard
               key={category.titleKey}
-              className="relative rpg-border bg-dark-900/80 p-6 hover:border-primary/30 transition-all"
+              className="relative rpg-border bg-dark-900/80 p-4 sm:p-6 hover:border-primary/30 transition-all"
               glareColor={`${category.color}33`}
             >
               <motion.div
@@ -150,7 +150,7 @@ const Skills = () => {
                       viewport={{ once: true }}
                       transition={{ delay: categoryIndex * 0.1 + techIndex * 0.05 }}
                       whileHover={{ scale: 1.1, y: -3 }}
-                      className="flex items-center gap-2 px-3 py-2 bg-dark-800/80 border-2 border-gray-700/50 hover:border-primary/50 transition-all cursor-default group"
+                      className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-dark-800/80 border-2 border-gray-700/50 hover:border-primary/50 transition-all cursor-default group"
                       style={{ imageRendering: 'pixelated' }}
                     >
                       <tech.icon
@@ -181,14 +181,14 @@ const Skills = () => {
             {t('skills.otherTools')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Git', 'Linux', 'REST API', 'JWT', 'OAuth2', 'WebSocket', 'Swagger/OpenAPI', 'Maven', 'Microservices', 'Agile/Scrum', 'Jira', 'Postman', 'Figma', 'PM2', 'Sequelize', 'TypeORM', 'Mongoose'].map((skill, index) => (
+            {['Git', 'Linux', 'REST API', 'JWT', 'OAuth2', 'WebSocket', 'Swagger/OpenAPI', 'Maven', 'Microservices', 'Payment Integration', 'Agile/Scrum', 'Jira', 'Postman', 'Figma', 'PM2', 'Sequelize', 'TypeORM', 'Mongoose'].map((skill, index) => (
               <motion.span
                 key={skill}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 + index * 0.05 }}
-                className="px-3 py-1.5 text-xs font-mono text-gray-400 border-2 border-gray-700/50 hover:border-primary hover:text-primary transition-all cursor-default"
+                className="px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-mono text-gray-400 border-2 border-gray-700/50 hover:border-primary hover:text-primary transition-all cursor-default"
               >
                 {skill}
               </motion.span>

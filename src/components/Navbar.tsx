@@ -173,12 +173,12 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-dark-800/95 backdrop-blur-md border-b-2 border-primary/20"
           >
-            <div className="px-4 py-4 space-y-4">
+            <div className="px-4 py-3 space-y-3">
               {navKeys.map((item, index) => (
                 <motion.a
                   key={item.key}
                   href={item.href}
-                  className="block font-mono text-gray-400 hover:text-primary transition-colors"
+                  className="block font-mono text-sm text-gray-400 hover:text-primary transition-colors py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -189,7 +189,7 @@ const Navbar = () => {
                 </motion.a>
               ))}
               {/* Mobile Language Toggle */}
-              <div className="flex items-center justify-between pt-2 border-t border-gray-800">
+              <div className="flex items-center justify-between pt-3 border-t border-gray-800">
                 <button
                   onClick={toggleLanguage}
                   className="font-pixel text-[8px] flex items-center gap-1.5 cursor-pointer px-2 py-1 border border-gray-700/50"
